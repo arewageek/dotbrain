@@ -2,10 +2,13 @@
 
 **CRITICAL RULE: Always read and reference this file before starting any planning or building tasks.**
 
-## 1. Vision Constraints
-- **Reference First**: Always refer back to `vision.md` to understand the overarching goals before beginning any implementation or planning phase.
-- **Stay Aligned**: Ensure all code, architecture, and feature implementations directly align with the documented project vision. Do not divert from the plan.
-- **Future-Proofing**: Keep the larger vision in mind when writing code. Optimize and structure the application in a way that will easily accommodate the features mapped out for later phases (Phase 2, 3, etc.).
+## 1. Vision & Blueprint Constraints
+- **Reference First**: Always refer back to `vision.md` and `blueprint.md` before beginning any implementation or planning phase.
+- **Purpose vs. Implementation**:
+  - `vision.md`: Defines the **"What"** and **"Why"** (Product purpose, business goals, target audience).
+  - `blueprint.md`: Defines the **"How"** (Technical architecture, design system, infrastructure).
+- **Stay Aligned**: Ensure all code and feature implementations align with the business goals in `vision.md` and follow the technical standards in `blueprint.md`.
+- **Future-Proofing**: Keep the larger vision and architectural blueprint in mind. Optimize for the features mapped out in later phases.
 
 ## 2. Task Management (`task.md`)
 - **Task Breakdown**: Whenever the user specifies a new feature to prioritize, break it down step-by-step into actionable tasks and log them in `task.md`. Walk through them one by one.

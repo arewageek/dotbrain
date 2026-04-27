@@ -29,9 +29,3 @@ BIL plans to offer a diverse marketplace for its partners and investors, includi
 ## 4. Target Audience
 - **Primary**: Individual investors and small/large businesses in Africa seeking capital growth.
 - **Secondary**: Regional partners and vendors interested in the BIL ecosystem.
-
-## 5. Design & Aesthetic Tone
-- **Professional & Trusted**: High-trust financial aesthetic utilizing **Sapphire Blue** for stability and professional reliability.
-- **Growth-Oriented**: **BIL Orange** branding elements focusing on energy, success, and "the right choice" for financial future.
-- **Modern & Dynamic**: Responsive UI with a focus on ease of use (email signup/verify/invest flow), using premium micro-animations and Bento-grid layouts.
-- **Depth & Texture**: Use of subtle professional photography to ground the digital experience in real-world investment sectors (Consumables, Real Estate).
