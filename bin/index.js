@@ -44,23 +44,33 @@ try {
     console.log('[INFO] Created .brain/.gitignore');
   }
 
-  // Create the AI hook file (e.g., .cursorrules)
-  const hookPath = path.join(targetDir, '.cursorrules');
+  // Create AI hook files for all major AI coding agents
   const hookContent = `I am an AI assistant for this project. My primary instruction manual is located in .brain/README.md. I must read that file before answering any questions or writing any code.`;
 
-  if (!fs.existsSync(hookPath)) {
-    fs.writeFileSync(hookPath, hookContent, 'utf-8');
-    console.log('[INFO] Created .cursorrules hook');
-  } else {
-    console.log('[WARN] .cursorrules already exists (skipped)');
-  }
+  const aiHooks = [
+    { file: '.cursorrules', name: 'Cursor' },
+    { file: '.windsurfrules', name: 'Windsurf' },
+    { file: '.clinerules', name: 'Cline / Roo Code' },
+    { file: 'CLAUDE.md', name: 'Claude Code' },
+    { file: '.github/copilot-instructions.md', name: 'GitHub Copilot' },
+    { file: '.ai-instructions.md', name: 'Generic AI / Others' }
+  ];
 
-  // Also create a generic .ai-instructions.md for other agents
-  const genericHookPath = path.join(targetDir, '.ai-instructions.md');
-  if (!fs.existsSync(genericHookPath)) {
-    fs.writeFileSync(genericHookPath, hookContent, 'utf-8');
-    console.log('[INFO] Created .ai-instructions.md hook');
-  }
+  aiHooks.forEach(hook => {
+    const hookPath = path.join(targetDir, hook.file);
+    const dir = path.dirname(hookPath);
+    
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    if (!fs.existsSync(hookPath)) {
+      fs.writeFileSync(hookPath, hookContent, 'utf-8');
+      console.log(`[INFO] Created ${hook.file} hook (${hook.name})`);
+    } else {
+      console.log(`[WARN] ${hook.file} already exists (skipped)`);
+    }
+  });
 
   console.log('----------------------------------------');
   console.log('[DONE] Initialization complete\n');
