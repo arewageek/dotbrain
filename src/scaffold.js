@@ -17,17 +17,17 @@ function createGitignore(targetBrainDir) {
 }
 
 function createAgentSkill(targetDir) {
-  const skillDir = path.join(targetDir, '.agent', 'skills', 'dotbrain');
+  const skillDir = path.join(targetDir, '.agents', 'skills', 'dotbrain');
   if (!fs.existsSync(skillDir)) {
     fs.mkdirSync(skillDir, { recursive: true });
   }
-  
+
   const skillPath = path.join(skillDir, 'SKILL.md');
   if (!fs.existsSync(skillPath)) {
     fs.writeFileSync(skillPath, AGENT_SKILL_CONTENT, 'utf-8');
-    logger.info('Created Agent Skill (.agent/skills/dotbrain/SKILL.md)');
+    logger.info('Created Agent Skill (.agents/skills/dotbrain/SKILL.md)');
   } else {
-    logger.warn('.agent/skills/dotbrain/SKILL.md already exists (skipped)');
+    logger.warn('.agents/skills/dotbrain/SKILL.md already exists (skipped)');
   }
 }
 

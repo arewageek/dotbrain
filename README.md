@@ -31,7 +31,7 @@ npm create dotbrain
 
 This command will:
 1. Create the `.brain/` directory structure with all the necessary templates.
-2. Automatically generate an Agent Skill at `.agent/skills/dotbrain/SKILL.md` to properly instruct your AI assistant on how to utilize and maintain the `.brain` context layer.
+2. Automatically generate an Agent Skill at `.agents/skills/dotbrain/SKILL.md` to properly instruct your AI assistant on how to utilize and maintain the `.brain` context layer.
 
 ### Next Steps:
 1. Open the newly created `.brain/vision.md` and `.brain/blueprint.md` files and fill in your project's specific details.

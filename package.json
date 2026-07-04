@@ -1,6 +1,6 @@
 {
   "name": "create-dotbrain",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI to scaffold the .brain AI context system into any project.",
   "main": "bin/index.js",
   "bin": {
