@@ -10,13 +10,13 @@ const AI_HOOKS = [
 ];
 
 const ANTIGRAVITY_SKILL_CONTENT = `---
-name: dot-brain
+name: dotbrain
 description: Instructs the AI on how to read, utilize, and maintain the .brain context layer for architectural consistency and memory in this project.
 ---
 
 # Dot-Brain AI Context System
 
-You are equipped with the \`dot-brain\` skill. This project uses a specialized directory called \`.brain/\` to manage project context, architectural blueprint, task tracking, and persistent memory. 
+You are equipped with the \`dotbrain\` skill. This project uses a specialized directory called \`.brain/\` to manage project context, architectural blueprint, task tracking, and persistent memory. 
 
 ## MANDATORY WORKFLOW
 Before beginning any coding or analysis task in this repository, you MUST:

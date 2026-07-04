@@ -1,5 +1,5 @@
 {
-  "name": "dot-brain",
+  "name": "dotbrain",
   "version": "1.0.0",
   "description": "A CLI to scaffold the .brain AI context system into any project.",
   "main": "bin/index.js",

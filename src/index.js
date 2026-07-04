@@ -13,7 +13,7 @@ function run() {
   const targetBrainDir = path.join(targetDir, '.brain');
   const templateDir = path.join(__dirname, '../template/.brain');
 
-  logger.header('Initializing dot-brain context layer...');
+  logger.header('Initializing dotbrain context layer...');
 
   if (fs.existsSync(targetBrainDir)) {
     logger.warn('The .brain directory already exists in this project.\n');
@@ -29,7 +29,7 @@ function run() {
     logger.footer();
     logger.success('Initialization complete');
   } catch (error) {
-    logger.error('Failed to initialize dot-brain:', error.message);
+    logger.error('Failed to initialize dotbrain:', error.message);
     process.exit(1);
   }
 }

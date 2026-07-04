@@ -1,4 +1,4 @@
-# dot-brain System
+# dotbrain System
 
 The `.brain` directory is a standardized context layer designed to "train" AI agents on your project's specific vision, architecture, and coding standards. It acts as an external memory and instruction set that ensures AI assistants remain aligned with your project's goals and technical philosophy.
 

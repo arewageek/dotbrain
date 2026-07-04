@@ -42,7 +42,13 @@ function createAIHooks(targetDir) {
       fs.writeFileSync(hookPath, AI_HOOK_CONTENT, 'utf-8');
       logger.info(`Created ${hook.file} hook (${hook.name})`);
     } else {
-      logger.warn(`${hook.file} already exists (skipped)`);
+      const existingContent = fs.readFileSync(hookPath, 'utf-8');
+      if (!existingContent.includes('.brain/README.md')) {
+        fs.appendFileSync(hookPath, '\n\n' + AI_HOOK_CONTENT + '\n', 'utf-8');
+        logger.info(`Appended instructions to existing ${hook.file} (${hook.name})`);
+      } else {
+        logger.warn(`${hook.file} already contains dotbrain instructions (skipped)`);
+      }
     }
   });
 }
