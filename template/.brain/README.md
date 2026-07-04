@@ -12,18 +12,42 @@
 - **task.md**: The "Current Focus". Tracks the breakdown of prioritized features into actionable steps.
 
 ## 2. Memory Structure Standards
-To ensure efficiency and cheap context lookup, all memory files (`global.md`, `project.md`) must follow this strictly topical structure:
 
-### Topic-Based Grouping
+When you update or populate the memory files, you MUST adhere to the following exact structures so that you do not forget the layout when the files grow:
+
+### For `global.md` and `project.md`
+To ensure efficiency and cheap context lookup, these files must follow this strictly topical structure:
+
+**Topic-Based Grouping**
 - Use `## TOPIC_NAME` for broad categories (e.g., `## AUTHENTICATION`, `## STYLING`).
 - Use `### SUB_TOPIC` for specific implementation areas.
 - Group ALL related rules, preferences, and architectural decisions under their respective topics.
 - **NEVER** scatter related information across multiple sections.
 
-### Entry Formatting
+**Entry Formatting Template**
 - **RULE**: Clear, concise rule statement.
 - **CONTEXT**: Brief explanation of the "Why" and when it applies.
 - **IMPLEMENTATION**: Specific code patterns or directory constraints.
+
+### For `temp.md`
+This file is a critical safety mechanism for preserving context across long-running tasks or session transitions. When checkpointing, use this exact structure:
+
+**## ACTIVE_CHECKPOINT**
+> [WHEN STARTING A LONG TASK: Document your intent, the architectural plan, and the current state here.]
+
+**### Intentions & Purpose**
+- **GOAL**: [What are we trying to achieve?]
+- **RATIONALE**: [Why are we doing it this way?]
+
+**### Architectural Plan**
+- **STRATEGY**: [Describe the approach]
+- **COMPONENTS_AFFECTED**: [List files/modules]
+
+**### Progress Tracking**
+- **DONE**: [Completed steps]
+- **NEXT_STEPS**: [What the next model session should pick up immediately]
+
+**CRITICAL**: If a task is nearing token limits, ensure `temp.md` is fully populated so the next session has all the necessary technical and philosophical context to proceed without deviation.
 
 ## 3. Decision Framework
 - **Stay Aligned**: Ensure all code and feature implementations align with the business goals in `vision.md` and follow the technical standards in `blueprint.md`.

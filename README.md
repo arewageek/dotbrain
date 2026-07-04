@@ -1,4 +1,4 @@
-# The .brain System
+# dotbrain System
 
 The `.brain` directory is a standardized context layer designed to "train" AI agents on your project's specific vision, architecture, and coding standards. It acts as an external memory and instruction set that ensures AI assistants remain aligned with your project's goals and technical philosophy.
 
@@ -11,7 +11,7 @@ The `.brain` directory is a standardized context layer designed to "train" AI ag
 ## Directory Structure
 
 ### Core Context
-- **`instructions.md`**: The master system manual. It tells the AI *how* to use the other files in the `.brain` directory.
+- **`README.md`**: The master system manual. It tells the AI *how* to use the other files in the `.brain` directory.
 - **`vision.md`**: Defines the "What" and "Why" (Product purpose, business goals, target audience).
 - **`blueprint.md`**: Defines the "How" (Technical stack, design system, application flows).
 - **`task.md`**: Tracks the current focus and breakdown of actionable steps.
@@ -22,8 +22,17 @@ The `.brain` directory is a standardized context layer designed to "train" AI ag
 - **`memory/temp.md`**: Short-term memory for session-specific reminders and architectural checkpoints.
 
 ## Getting Started
-1. Copy the `.brain` folder into your project root.
-2. Fill in the templates in `vision.md` and `blueprint.md`.
-3. Point your AI agent to `instructions.md` at the start of every session.
-4. As you develop, the AI will automatically "capture" new preferences and rules into `project.md` and `global.md`.
-5. You can choose to move the `.brain/global.md` file to a global directory e.g. `~/.brain/global` if you want to use it across multiple projects.
+
+To scaffold the `.brain` system into your project, simply run the following command at the root of your project:
+
+```bash
+npm create dotbrain
+```
+
+This command will:
+1. Create the `.brain/` directory structure with all the necessary templates.
+2. Automatically generate an Agent Skill at `.agent/skills/dotbrain/SKILL.md` to properly instruct your AI assistant on how to utilize and maintain the `.brain` context layer.
+
+### Next Steps:
+1. Open the newly created `.brain/vision.md` and `.brain/blueprint.md` files and fill in your project's specific details.
+2. Start interacting with your AI agent! As you develop, the AI will automatically "capture" new preferences and rules into `project.md` and `global.md`.

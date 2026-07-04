@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+/.brain/
+.cursorrules
+.ai-instructions.md
+.clinerules
+CLAUDE.md
+.windsurfrules
+.github/copilot-instructions.md
