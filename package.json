@@ -1,6 +1,6 @@
 {
   "name": "create-dotbrain",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI to scaffold the .brain AI context system into any project.",
   "main": "bin/index.js",
   "bin": {
@@ -19,5 +19,9 @@
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arewageek/dotbrain.git"
+  }
 }
