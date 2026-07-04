@@ -26,7 +26,7 @@ The `.brain` directory is a standardized context layer designed to "train" AI ag
 To scaffold the `.brain` system into your project, simply run the following command at the root of your project:
 
 ```bash
-npx dotbrain
+npm create dotbrain
 ```
 
 This command will:

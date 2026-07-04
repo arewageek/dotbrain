@@ -1,6 +1,6 @@
 {
-  "name": "@arewageek/dotbrain",
-  "version": "1.0.0",
+  "name": "create-dotbrain",
+  "version": "1.0.1",
   "description": "A CLI to scaffold the .brain AI context system into any project.",
   "main": "bin/index.js",
   "bin": {
