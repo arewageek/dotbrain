@@ -1,0 +1,23 @@
+{
+  "name": "dot-brain",
+  "version": "1.0.0",
+  "description": "A CLI to scaffold the .brain AI context system into any project.",
+  "main": "bin/index.js",
+  "bin": {
+    "dotbrain": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "context",
+    "brain",
+    "agents",
+    "llm",
+    "prompt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
