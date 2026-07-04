@@ -4,8 +4,7 @@ const { logger } = require('./utils');
 const { 
   copyTemplateFiles, 
   createGitignore, 
-  createAntigravitySkill, 
-  createAIHooks 
+  createAgentSkill 
 } = require('./scaffold');
 
 function run() {
@@ -23,8 +22,7 @@ function run() {
   try {
     copyTemplateFiles(templateDir, targetBrainDir);
     createGitignore(targetBrainDir);
-    createAntigravitySkill(targetBrainDir);
-    createAIHooks(targetDir);
+    createAgentSkill(targetDir);
 
     logger.footer();
     logger.success('Initialization complete');

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { copyDirectorySync, logger } = require('./utils');
-const { AI_HOOK_CONTENT, AI_HOOKS, ANTIGRAVITY_SKILL_CONTENT } = require('./constants');
+const { AGENT_SKILL_CONTENT } = require('./constants');
 
 function copyTemplateFiles(templateDir, targetBrainDir) {
   copyDirectorySync(templateDir, targetBrainDir);
@@ -16,46 +16,23 @@ function createGitignore(targetBrainDir) {
   }
 }
 
-function createAntigravitySkill(targetBrainDir) {
-  const skillDir = path.join(targetBrainDir, 'antigravity-skill');
+function createAgentSkill(targetDir) {
+  const skillDir = path.join(targetDir, '.agent', 'skills', 'dotbrain');
   if (!fs.existsSync(skillDir)) {
     fs.mkdirSync(skillDir, { recursive: true });
   }
   
   const skillPath = path.join(skillDir, 'SKILL.md');
   if (!fs.existsSync(skillPath)) {
-    fs.writeFileSync(skillPath, ANTIGRAVITY_SKILL_CONTENT, 'utf-8');
-    logger.info('Created Antigravity Skill (.brain/antigravity-skill/SKILL.md)');
+    fs.writeFileSync(skillPath, AGENT_SKILL_CONTENT, 'utf-8');
+    logger.info('Created Agent Skill (.agent/skills/dotbrain/SKILL.md)');
+  } else {
+    logger.warn('.agent/skills/dotbrain/SKILL.md already exists (skipped)');
   }
-}
-
-function createAIHooks(targetDir) {
-  AI_HOOKS.forEach(hook => {
-    const hookPath = path.join(targetDir, hook.file);
-    const dir = path.dirname(hookPath);
-    
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-
-    if (!fs.existsSync(hookPath)) {
-      fs.writeFileSync(hookPath, AI_HOOK_CONTENT, 'utf-8');
-      logger.info(`Created ${hook.file} hook (${hook.name})`);
-    } else {
-      const existingContent = fs.readFileSync(hookPath, 'utf-8');
-      if (!existingContent.includes('.brain/README.md')) {
-        fs.appendFileSync(hookPath, '\n\n' + AI_HOOK_CONTENT + '\n', 'utf-8');
-        logger.info(`Appended instructions to existing ${hook.file} (${hook.name})`);
-      } else {
-        logger.warn(`${hook.file} already contains dotbrain instructions (skipped)`);
-      }
-    }
-  });
 }
 
 module.exports = {
   copyTemplateFiles,
   createGitignore,
-  createAntigravitySkill,
-  createAIHooks
+  createAgentSkill
 };

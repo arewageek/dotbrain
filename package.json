@@ -1,10 +1,10 @@
 {
-  "name": "dotbrain",
+  "name": "@arewageek/dotbrain",
   "version": "1.0.0",
   "description": "A CLI to scaffold the .brain AI context system into any project.",
   "main": "bin/index.js",
   "bin": {
-    "dotbrain": "./bin/index.js"
+    "dotbrain": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

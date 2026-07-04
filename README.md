@@ -31,7 +31,7 @@ npx dotbrain
 
 This command will:
 1. Create the `.brain/` directory structure with all the necessary templates.
-2. Automatically generate AI hook files (e.g., `.cursorrules` and `.ai-instructions.md`) to point your AI assistant to the `.brain/README.md` file automatically.
+2. Automatically generate an Agent Skill at `.agent/skills/dotbrain/SKILL.md` to properly instruct your AI assistant on how to utilize and maintain the `.brain` context layer.
 
 ### Next Steps:
 1. Open the newly created `.brain/vision.md` and `.brain/blueprint.md` files and fill in your project's specific details.
